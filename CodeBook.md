@@ -38,6 +38,12 @@ Each row identifies the subject who performed the activity for each window sampl
 
 ### Features
 
+The set of variables that were estimated from these signals are: 
+mean(): Mean value
+std(): Standard deviation
+
+Features with prefix time are time domain signal captured at a constant rate of 50 Hz. And features with prefix frequency are in frequency domain domain.
+
 | feature column name |
 |:--------------------:|
 | timeBodyAccelerometer-mean()-X |

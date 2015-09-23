@@ -1,14 +1,14 @@
 Getting and Cleaning Data Course Project
 ----------------------------------------
 
-# download_corpus.R
+# download_data.R
 
 This will download the corpus and extract it in directory named `UCI HAR Dataset`, if corpus in Not already downloaded.
 
 Download data using:
 
 ```
-source('download_corpus.R')
+source('download_data.R')
 ```
 
 # run_analysis.R
