@@ -27,14 +27,14 @@ colnames(feature_data) <- feature_names[,2]
 
 # Extract only mean and standard deviation
 required_feature_names <- feature_names[,2][grep("mean\\(\\)|std\\(\\)", feature_names[,2])]
-required_feature_data <- feature_data[required_feature_names]
+required_feature_data <- feature_data[as.character(required_feature_names)]
 
 # Combined data with Activity and Feature name
 data <- cbind(subject_data, activity_data, required_feature_data)
 
 # Use descriptive activity names to name the activities in the data set.
 activity_labels <- read.table(file.path(root_dir, "activity_labels.txt"))
-data$activity <- factor(data$activity,labels=as.character(activity_labels[,2]))
+data$activity <- factor(data$activity, labels = as.character(activity_labels[,2]))
 
 # Appropriately labels the data set with descriptive variable names.
 
