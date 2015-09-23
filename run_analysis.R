@@ -1,24 +1,21 @@
-setwd('gncDS')
-# 128 columns
-# Each 16 Char
-# Except 1st 17 and 128th 15
-
-
-# X
+# Directory Variables
 root_dir <- file.path("UCI HAR Dataset")
 test_dir <- file.path(root_dir, "test")
 train_dir <- file.path(root_dir, "train")
 
+# Subject data
 sub_test_data <- read.table(file.path(test_dir, "subject_test.txt" ))
 sub_train_data <- read.table(file.path(train_dir, "subject_train.txt" ))
 subject_data <- rbind(sub_test_data, sub_train_data)
 colnames(subject_data) <- "subject"
 
+# Activity data
 activity_test_data <- read.table(file.path(test_dir, "y_test.txt" ))
 activity_train_data <- read.table(file.path(train_dir, "y_train.txt" ))
 activity_data <- rbind(activity_test_data, activity_train_data)
 colnames(activity_data) <- "activity"
 
+# Feature data
 feature_test_data <- read.table(file.path(test_dir, "X_test.txt" ))
 feature_train_data <- read.table(file.path(train_dir, "X_train.txt" ))
 feature_data <- rbind(feature_test_data, feature_train_data)
